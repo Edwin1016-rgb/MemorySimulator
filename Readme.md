@@ -1,18 +1,18 @@
 # 🧠 Simulador de Gestión de Memoria - Sistemas Operativos
 # Levantar el backend
-cd backend
-python -m venv venv
-source venv/bin/activate      # En Windows: venv\Scripts\activate
-pip install -r requirements.txt
+- cd backend
+- python -m venv venv
+- source venv/bin/activate      # En Windows: venv\Scripts\activate
+- pip install -r requirements.txt
 
-estando en ---> MemorySimulator\backend> 
-python app.py
+## Estando en ---> MemorySimulator\backend> 
+- python app.py
 
 # Levantar el frontend
 
-cd gestor-memoria
-npm install
-npm run dev
+- cd gestor-memoria
+- npm install
+- npm run dev
 
 # Documentacion completa aqui:
 - De click en la imagen para ser llevado a la documentacion
