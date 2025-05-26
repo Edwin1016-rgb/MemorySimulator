@@ -11,7 +11,6 @@ CORS(app)
 logging.basicConfig(level=logging.INFO)
 scheduler = Scheduler()
 
-# Validador de procesos.json
 REQUIRED_FIELDS = {"pid": str, "size": int, "priority": int, "mode": str}
 
 VALID_MODES = {"contigua", "segmentacion", "paginacion"}
@@ -57,10 +56,7 @@ def validar_datos():
 
 @app.route('/iniciar', methods=['GET'])
 def iniciar_simulador():
-    # Aquí deberías inicializar la memoria, swap, y otros componentes necesarios
-    # Esto depende de cómo estés manejando la inicialización en tu backend
-    # Por ejemplo:
-    scheduler.reset()  # Si tienes un objeto de memoria similar
+    scheduler.reset()
     return jsonify({"status": "iniciado"})
 
 
@@ -105,7 +101,6 @@ def reset():
 def obtener_estado():
     try:
         estado = scheduler.obtener_estado_completo()
-        # Podemos agregar formato adicional aquí si es necesario
         return jsonify({
             "success": True,
             "data": estado

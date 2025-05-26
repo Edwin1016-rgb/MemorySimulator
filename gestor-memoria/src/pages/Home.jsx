@@ -19,7 +19,6 @@ export default function Home() {
         setEstado(res.data.data);
         console.log("Contenido RAM:", res.data.data.memoria?.ram?.contenido);
         console.log("Contenido SWAP:", res.data.data.memoria?.swap?.contenido);
-        // Mantener solo los últimos 20 eventos para no saturar la UI
         if (res.data.data.eventos) {
           setEventos(prev => [...res.data.data.eventos.slice(0, 5), ...prev.slice(0, 15)]);
         }
