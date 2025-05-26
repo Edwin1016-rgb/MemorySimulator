@@ -101,5 +101,21 @@ def reset():
     logging.info("Simulación reiniciada.")
     return "OK"
 
+@app.route("/estado", methods=['GET'])
+def obtener_estado():
+    try:
+        estado = scheduler.obtener_estado_completo()
+        # Podemos agregar formato adicional aquí si es necesario
+        return jsonify({
+            "success": True,
+            "data": estado
+        })
+    except Exception as e:
+        logging.error(f"Error al obtener estado: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e)
+        }), 500
+
 if __name__ == "__main__":
     app.run(debug=True)

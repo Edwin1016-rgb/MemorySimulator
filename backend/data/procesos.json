@@ -147,5 +147,105 @@
     "tiempo_llegada": 6,
     "tiempo_ejecucion": 7,
     "tiempo_cpu": 4
+  },{
+    "pid": "P16",
+    "size": 1024,
+    "priority": 2,
+    "mode": "contigua",
+    "asignacion": "fija",
+    "tiempo_llegada": 8,
+    "tiempo_ejecucion": 10,
+    "tiempo_cpu": 6
+  },
+  {
+    "pid": "P17",
+    "size": 64,
+    "priority": 5,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "worst_fit",
+    "tiempo_llegada": 9,
+    "tiempo_ejecucion": 3,
+    "tiempo_cpu": 1
+  },
+  {
+    "pid": "P18",
+    "size": 200,
+    "priority": 4,
+    "mode": "segmentacion",
+    "segmentos": [50, 50, 50, 50],
+    "tiempo_llegada": 10,
+    "tiempo_ejecucion": 6,
+    "tiempo_cpu": 3
+  },
+  {
+    "pid": "P19",
+    "size": 120,
+    "priority": 1,
+    "mode": "paginacion",
+    "tiempo_llegada": 11,
+    "tiempo_ejecucion": 5,
+    "tiempo_cpu": 2
+  },
+  {
+    "pid": "P20",
+    "size": 512,
+    "priority": 3,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "next_fit",
+    "tiempo_llegada": 12,
+    "tiempo_ejecucion": 9,
+    "tiempo_cpu": 5
+  },
+  {
+    "pid": "P21",
+    "size": 256,
+    "priority": 5,
+    "mode": "segmentacion",
+    "segmentos": [64, 64, 64, 64],
+    "tiempo_llegada": 13,
+    "tiempo_ejecucion": 6,
+    "tiempo_cpu": 4
+  },
+  {
+    "pid": "P22",
+    "size": 96,
+    "priority": 2,
+    "mode": "paginacion",
+    "tiempo_llegada": 14,
+    "tiempo_ejecucion": 4,
+    "tiempo_cpu": 2
+  },
+  {
+    "pid": "P23",
+    "size": 640,
+    "priority": 3,
+    "mode": "contigua",
+    "asignacion": "fija",
+    "tiempo_llegada": 15,
+    "tiempo_ejecucion": 12,
+    "tiempo_cpu": 8
+  },
+  {
+    "pid": "P24",
+    "size": 300,
+    "priority": 1,
+    "mode": "segmentacion",
+    "segmentos": [100, 100, 100],
+    "tiempo_llegada": 16,
+    "tiempo_ejecucion": 7,
+    "tiempo_cpu": 5
+  },
+  {
+    "pid": "P25",
+    "size": 128,
+    "priority": 4,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "best_fit",
+    "tiempo_llegada": 17,
+    "tiempo_ejecucion": 4,
+    "tiempo_cpu": 2
   }
 ]

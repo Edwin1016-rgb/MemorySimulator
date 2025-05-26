@@ -2,10 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.btn {
-  @apply px-4 py-2 rounded text-white font-semibold;
+/* Establece el fondo gris claro por defecto */
+body {
+  @apply bg-gray-50;
 }
 
-.btn-primary { @apply bg-blue-600 hover:bg-blue-700; }
-.btn-secondary { @apply bg-green-600 hover:bg-green-700; }
-.btn-accent { @apply bg-red-600 hover:bg-red-700; }
+/* Elimina márgenes por defecto */
+body, html {
+  @apply m-0 p-0 h-full;
+}
+
+/* Estilos para los botones */
+.btn {
+  @apply px-4 py-2 rounded text-white font-semibold transition-colors duration-200;
+}
+
+.btn-primary { 
+  @apply bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400; 
+}
+.btn-secondary { 
+  @apply bg-green-600 hover:bg-green-700 disabled:bg-green-400; 
+}
+.btn-accent { 
+  @apply bg-red-600 hover:bg-red-700 disabled:bg-red-400; 
+}
+
+/* Asegura que los contenedores principales ocupen todo el espacio */
+#root {
+  @apply min-h-full;
+}

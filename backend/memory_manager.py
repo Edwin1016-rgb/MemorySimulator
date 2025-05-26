@@ -2,7 +2,7 @@ import copy
 from collections import deque
 
 class MemoryManager:
-    def __init__(self, ram_size=2024, swap_size=3048):
+    def __init__(self, ram_size=1024, swap_size=2048):
         """
         ram_size, swap_size: tamaños totales en KB
         """
@@ -358,7 +358,33 @@ class MemoryManager:
             "procesos_activos": len(self.procesos_activos),
             "fragmentacion_ram": len([b for b in self.ram if b["pid"] is None])
         }
-
+    def obtener_estado_memoria(self):
+        """Devuelve solo el estado de la memoria (RAM y SWAP)"""
+        stats = self.obtener_estadisticas()
+        
+        return {
+            "ram": {
+                "bloques": self.ram,
+                "total": self.ram_size,
+                "usada": stats["ram_ocupada"],
+                "libre": stats["ram_libre"],
+                "fragmentacion": stats["fragmentacion_ram"]
+            },
+            "swap": {
+                "bloques": self.swap,
+                "total": self.swap_size,
+                "usada": stats["swap_ocupado"],
+                "libre": stats["swap_libre"]
+            },
+            "procesos_activos": {
+                pid: {
+                    "size": info["size"],
+                    "ubicacion": info["ubicacion"],
+                    "tiempo_restante": info["tiempo_restante"]
+                }
+                for pid, info in self.procesos_activos.items()
+            }
+    }
     def __repr__(self):
         stats = self.obtener_estadisticas()
         return f"RAM: {self.ram}\nSWAP: {self.swap}\nStats: {stats}"

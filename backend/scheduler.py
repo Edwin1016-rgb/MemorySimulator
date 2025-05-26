@@ -172,19 +172,38 @@ class Scheduler:
 
     def obtener_estado_completo(self):
         """Obtiene el estado completo del sistema"""
+        estado_memoria = self.memory_manager.obtener_estado_memoria()
+        
         return {
             "tick_actual": self.current_tick,
-            "memoria": {
-                "ram": self.memory_manager.ram,
-                "swap": self.memory_manager.swap,
-                "estadisticas": self.memory_manager.obtener_estadisticas()
-            },
+            "memoria": estado_memoria,
             "procesos": {
-                "activos": dict(self.memory_manager.procesos_activos),
+                "activos": estado_memoria["procesos_activos"],
                 "terminados": self.procesos_terminados,
-                "en_espera": list(self.procesos_en_espera),
-                "pendientes": self.procesos_pendientes
+                "en_espera": [
+                    {
+                        "pid": p["pid"],
+                        "size": p["size"],
+                        "priority": p.get("priority", 1),
+                        "tiempo_llegada": p.get("tiempo_llegada", 0),
+                        "mode": p.get("mode", "contigua")
+                    }
+                    for p in self.procesos_en_espera
+                ],
+                "pendientes": [
+                    {
+                        "pid": p["pid"],
+                        "size": p["size"],
+                        "tiempo_llegada": p.get("tiempo_llegada", 0)
+                    }
+                    for p in self.procesos_pendientes
+                ]
             },
-            "metricas": self.calcular_eficiencia(),
+            "metricas": {
+                "uso_ram": (estado_memoria["ram"]["usada"] / estado_memoria["ram"]["total"]) * 100,
+                "uso_swap": (estado_memoria["swap"]["usada"] / estado_memoria["swap"]["total"]) * 100,
+                "procesos_activos": len(estado_memoria["procesos_activos"]),
+                "procesos_en_espera": len(self.procesos_en_espera)
+            },
             "finished": self.finished
-        }
+    }
