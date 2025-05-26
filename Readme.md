@@ -1,1 +1,4 @@
-https://github.com/Edwin1016-rgb/MemorySimulator/issues/1#issue-3091898376
+
+# Documentacion completa aqui:
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Edwin1016-rgb/MemorySimulator)
