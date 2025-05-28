@@ -1,0 +1,201 @@
+[
+  {
+    "pid": "P1",
+    "size": 300,
+    "priority": 2,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "first_fit",
+    "tiempo_llegada": 0,
+    "tiempo_ejecucion": 7,
+    "tiempo_cpu": 4
+  },
+  {
+    "pid": "P2",
+    "size": 256,
+    "priority": 3,
+    "mode": "paginacion",
+    "tiempo_llegada": 1,
+    "tiempo_ejecucion": 5,
+    "tiempo_cpu": 3
+  },
+  {
+    "pid": "P3",
+    "size": 400,
+    "priority": 1,
+    "mode": "segmentacion",
+    "segmentos": [150, 150, 100],
+    "tiempo_llegada": 2,
+    "tiempo_ejecucion": 10,
+    "tiempo_cpu": 6
+  },
+  {
+    "pid": "P4",
+    "size": 512,
+    "priority": 4,
+    "mode": "contigua",
+    "asignacion": "fija",
+    "tiempo_llegada": 3,
+    "tiempo_ejecucion": 8,
+    "tiempo_cpu": 5
+  },
+  {
+    "pid": "P5",
+    "size": 192,
+    "priority": 2,
+    "mode": "paginacion",
+    "tiempo_llegada": 4,
+    "tiempo_ejecucion": 6,
+    "tiempo_cpu": 3
+  },
+  {
+    "pid": "P6",
+    "size": 256,
+    "priority": 5,
+    "mode": "segmentacion",
+    "segmentos": [128, 64, 64],
+    "tiempo_llegada": 5,
+    "tiempo_ejecucion": 7,
+    "tiempo_cpu": 4
+  },
+  {
+    "pid": "P7",
+    "size": 100,
+    "priority": 1,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "best_fit",
+    "tiempo_llegada": 6,
+    "tiempo_ejecucion": 3,
+    "tiempo_cpu": 2
+  },
+  {
+    "pid": "P8",
+    "size": 384,
+    "priority": 3,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "worst_fit",
+    "tiempo_llegada": 7,
+    "tiempo_ejecucion": 9,
+    "tiempo_cpu": 5
+  },
+  {
+    "pid": "P9",
+    "size": 128,
+    "priority": 4,
+    "mode": "paginacion",
+    "tiempo_llegada": 8,
+    "tiempo_ejecucion": 4,
+    "tiempo_cpu": 2
+  },
+  {
+    "pid": "P10",
+    "size": 600,
+    "priority": 2,
+    "mode": "segmentacion",
+    "segmentos": [300, 200, 100],
+    "tiempo_llegada": 9,
+    "tiempo_ejecucion": 11,
+    "tiempo_cpu": 6
+  },
+  {
+    "pid": "P11",
+    "size": 64,
+    "priority": 5,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "next_fit",
+    "tiempo_llegada": 10,
+    "tiempo_ejecucion": 3,
+    "tiempo_cpu": 1
+  },
+  {
+    "pid": "P12",
+    "size": 512,
+    "priority": 3,
+    "mode": "paginacion",
+    "tiempo_llegada": 11,
+    "tiempo_ejecucion": 10,
+    "tiempo_cpu": 6
+  },
+  {
+    "pid": "P13",
+    "size": 224,
+    "priority": 1,
+    "mode": "segmentacion",
+    "segmentos": [64, 80, 80],
+    "tiempo_llegada": 12,
+    "tiempo_ejecucion": 6,
+    "tiempo_cpu": 3
+  },
+  {
+    "pid": "P14",
+    "size": 320,
+    "priority": 4,
+    "mode": "contigua",
+    "asignacion": "fija",
+    "tiempo_llegada": 13,
+    "tiempo_ejecucion": 7,
+    "tiempo_cpu": 5
+  },
+  {
+    "pid": "P15",
+    "size": 96,
+    "priority": 2,
+    "mode": "paginacion",
+    "tiempo_llegada": 14,
+    "tiempo_ejecucion": 4,
+    "tiempo_cpu": 2
+  },
+  {
+    "pid": "P16",
+    "size": 448,
+    "priority": 5,
+    "mode": "segmentacion",
+    "segmentos": [224, 128, 96],
+    "tiempo_llegada": 15,
+    "tiempo_ejecucion": 9,
+    "tiempo_cpu": 4
+  },
+  {
+    "pid": "P17",
+    "size": 160,
+    "priority": 3,
+    "mode": "contigua",
+    "asignacion": "variable",
+    "estrategia": "first_fit",
+    "tiempo_llegada": 16,
+    "tiempo_ejecucion": 5,
+    "tiempo_cpu": 3
+  },
+  {
+    "pid": "P18",
+    "size": 1024,
+    "priority": 1,
+    "mode": "contigua",
+    "asignacion": "fija",
+    "tiempo_llegada": 17,
+    "tiempo_ejecucion": 12,
+    "tiempo_cpu": 7
+  },
+  {
+    "pid": "P19",
+    "size": 200,
+    "priority": 4,
+    "mode": "paginacion",
+    "tiempo_llegada": 18,
+    "tiempo_ejecucion": 6,
+    "tiempo_cpu": 3
+  },
+  {
+    "pid": "P20",
+    "size": 300,
+    "priority": 2,
+    "mode": "segmentacion",
+    "segmentos": [150, 75, 75],
+    "tiempo_llegada": 19,
+    "tiempo_ejecucion": 8,
+    "tiempo_cpu": 5
+  }
+]

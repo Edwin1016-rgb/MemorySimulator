@@ -8,9 +8,9 @@ class MemoryManager:
         """
         self.ram_size = ram_size
         self.swap_size = swap_size
-        self.next_fit_pointer = 0  # Para algoritmo next_fit
-        self.lru_order = deque()   # Para LRU en swap
-        self.procesos_activos = {}  # Tracking de procesos: {pid: {tiempo_restante, ubicacion}}
+        self.next_fit_pointer = 0  
+        self.lru_order = deque()   
+        self.procesos_activos = {} 
         self.reset()
 
     def reset(self):
